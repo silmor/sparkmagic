@@ -4,8 +4,8 @@ python:
 - '3.3'
 before_install:
 - sudo apt-get -qq update
-- sudo apt-get install --only-upgrade python-pip
-- sudo apt-get install --only-upgrade python3-pip
+- sudo apt-get install python-pip
+- sudo apt-get install python3-pip
 install:
 - pip install six
 - pip install -r hdijupyterutils/requirements.txt -e hdijupyterutils
