@@ -3,7 +3,12 @@
 
 from plotly.graph_objs import Figure, Data, Layout
 from plotly.offline import iplot
-from pandas.core.groupby import DataError
+try:
+    #for pandas >= 0.23
+    from pandas.core.base import DataError
+except:
+    #for pandas < 0.23
+    from pandas.core.groupby import DataError
 
 from ..widget.encoding import Encoding
 from ..widget.invalidencodingerror import InvalidEncodingError
